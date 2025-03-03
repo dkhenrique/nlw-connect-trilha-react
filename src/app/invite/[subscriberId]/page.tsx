@@ -1,5 +1,6 @@
 import logo from "@/assets/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { InviteLinkInput } from "./invite-link-input";
 import { Ranking } from "./ranking";
 import { Stats } from "./stats";
@@ -17,12 +18,15 @@ export default async function Invite(props: InvitePageProps) {
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
       <div className="flex flex-col gap-10 w-full max-w-[550px]">
-        <Image
-          src={logo}
-          alt="DevStage"
-          width={108.5}
-          height={30}
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="DevStage"
+            width={108.5}
+            height={30}
+          />
+        </Link>
+
         <div className="space-y-2">
           <h1 className="font-heading text-4xl font-semibold text-gray-100 leading-none">
             Inscrição confirmada!
